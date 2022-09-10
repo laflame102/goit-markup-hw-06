@@ -623,6 +623,73 @@ font-family: 'Raleway';
     height: 20px;
     fill: currentColor;
 }
+
+/* footer-form */
+.footer-form {
+    margin-left: auto;
+}
+
+
+.footer-form-title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--white-color);
+        margin-bottom: 20px;
+}
+
+.mailing-list-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+.footer-form-input{
+    width: 358px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 15px 16px;
+    margin-right: 12px;
+}
+
+.footer-form-input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form-button {
+    width: 200px;
+    height: 50px;
+    background-color: var(--color-links);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: var(--white-color);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-button:hover,
+.footer-form-button:focus {
+    background-color: #188CE8;
+}
+
+.form-button-icon-send {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
 /* backdrop */
 
 .backdrop {
@@ -695,7 +762,6 @@ font-family: 'Raleway';
   margin-bottom: 10px;
   color: var(--text-color);
   font-size: 12px;
-  position: relative;
 }
 
 .modal-form-input {
@@ -773,19 +839,32 @@ font-family: 'Raleway';
 .checkbox-border {
     width: 16px;
     height: 15px;
+    margin-right: 7px;
 }
 
 .checkbox-icon-check {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    display: none;
     width: 16px;
     height: 15px;
+    margin-right: 7px;
+    border-radius: 3px;
 }
 
+.modal-form-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
 .form-checkbox:checked ~ .checkbox-icon-check {
+    display: inline-block;
     background-color: var(--color-links);
+}
+
+.form-checkbox:checked~.checkbox-border {
+    display: none;
 }
 
 .modal-form-button {
